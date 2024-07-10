@@ -1,0 +1,78 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.navbar {
+    background-color: #ffffff; /* Warna latar belakang navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: background-color 0.3s; /* Transisi perubahan warna latar belakang */
+    z-index: 1000; /* Z-index untuk menempatkan navbar di atas konten */
+}
+
+/* Navbar saat di-scroll */
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 60px;
+}
+
+.additional-logo {
+    height: 40px; /* Adjust height as needed */
+    filter: brightness(0) invert(1); /* Make the logo white */
+    margin-bottom: 4px; /* Add space below the logo */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow */
+}
+
+.header-content {
+    background-color: #ffffff; /* Ganti latar belakang menjadi putih */
+    padding: 20px 0; /* Atur padding atas dan bawah */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efek bayangan yang lebih halus */
+}
+
+.header-content h1 {
+    font-size: 3rem; /* Ukuran font */
+    font-weight: bold; /* Mengatur tebalnya font */
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efek bayangan pada teks */
+}
+
+@media (min-width: 992px) {
+    .header-content {
+        margin-top: 90px; /* Jarak antara navbar dan header */
+    }
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
