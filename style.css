@@ -5,18 +5,22 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff; /* Warna latar belakang navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-    transition: background-color 0.3s; /* Transisi perubahan warna latar belakang */
-    z-index: 1000; /* Z-index untuk menempatkan navbar di atas konten */
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    z-index: 1000;
 }
 
-/* Navbar saat di-scroll */
 .navbar.fixed-top {
     position: fixed;
     top: 0;
     width: 100%;
 }
+
+.navbar .form-control {
+    width: 300px; /* Lebar kotak pencarian */
+}
+
 
 .navbar-brand {
     padding-left: 15px;
@@ -29,35 +33,57 @@ body {
 }
 
 .additional-logo {
-    height: 40px; /* Adjust height as needed */
-    filter: brightness(0) invert(1); /* Make the logo white */
-    margin-bottom: 4px; /* Add space below the logo */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow */
+    height: 40px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header-content {
-    background-color: #ffffff; /* Ganti latar belakang menjadi putih */
-    padding: 20px 0; /* Atur padding atas dan bawah */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efek bayangan yang lebih halus */
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-content h1 {
-    font-size: 3rem; /* Ukuran font */
-    font-weight: bold; /* Mengatur tebalnya font */
+    font-size: 3rem;
+    font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efek bayangan pada teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 992px) {
     .header-content {
-        margin-top: 90px; /* Jarak antara navbar dan header */
+        margin-top: 90px;
     }
 }
 
 .card {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.card-text {
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+}
+
+.btn-primary {
+    background-color: #b22222;
+    border-color: #b22222;
+}
+
+.btn-primary:hover {
+    background-color: #8b0000;
+    border-color: #8b0000;
 }
 
 .card:hover {
@@ -75,4 +101,55 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+footer .container {
+    padding: 50px 0;
+}
+
+footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+footer p,
+footer ul {
+    font-size: 0.875rem;
+}
+
+footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .bg-secondary {
+    background-color: #444 !important;
+}
+
+#searchResults {
+    position: absolute;
+    top: 100%; /* Menempatkan di bawah navbar */
+    left: 0;
+    z-index: 1000; /* Pastikan lebih tinggi dari konten lain */
+    width: 100%;
+    background-color: #fff; /* Latar belakang putih */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    padding: 10px; /* Padding untuk ruang di dalam */
+}
+
+#searchResults .card {
+    margin-bottom: 10px; /* Jarak antara setiap kartu */
 }
